@@ -4,5 +4,11 @@ class Movie < ApplicationRecord
                          format: { with: is_a?(Date) }
   validates :cinema, presence: true,
                      length: { minimum: 3 }
-  validates :imdb_link, presence: true
+  validate :valid_imdb_link
+
+  def valid_imdb_link
+    unless imdb_link[0...2] == "tt" && imdb_link.length == 9
+      errors.add(:imdb_link, "Please submit a valid IMDb link.")
+    end
+  end
 end
