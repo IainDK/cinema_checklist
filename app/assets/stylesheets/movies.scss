@@ -1,7 +1,22 @@
 // Place all the styles related to the Movies controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.movie_form {
+
+html {
+ height: 100%;
+}
+
+body {
+  height: 100%;
+  background: linear-gradient(rgb(180, 180, 180), white);
+}
+
+.add_a_movie {
   text-align: center;
   padding-top: 50px;
+}
+
+.add_movie_title {
+  padding-bottom: 50px;
+  @import url('https://fonts.googleapis.com/css?family=Montserrat');
 }
