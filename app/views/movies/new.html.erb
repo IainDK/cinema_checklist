@@ -1,7 +1,9 @@
-<%= form_for @movie do |f| %>
-  Title: <%= f.text_field :movie_title %><br />
-  Watch Date: <%= f.text_field :watch_date %><br />
-  Cinema: <%= f.text_area :cinema %><br />
-  IMDb Link: <%= f.text_area :imdb_link %><br />
-  <%= f.submit %>
-<% end %>
+<div class=movie_form>
+  <%= form_for @movie do |f| %>
+    Title: <%= f.text_field :movie_title %><br />
+    Watch Date: <%= f.text_field :watch_date %><br />
+    Cinema: <%= f.text_area :cinema %><br />
+    IMDb Link: <%= f.text_area :imdb_link %><br />
+    <%= f.submit %>
+  <% end %>
+</div>

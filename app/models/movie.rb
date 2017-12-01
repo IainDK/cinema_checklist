@@ -20,7 +20,7 @@ class Movie < ApplicationRecord
   end
 
   def contains_7_numbers?
-    imdb_link.chars.select {|x| x[/\d+/]}.count == 7
+    imdb_link.chars.select { |x| x[/\d+/] }.count == 7
   end
 
   def is_9_characters_long?
