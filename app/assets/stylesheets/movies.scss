@@ -11,6 +11,14 @@ body {
   background: linear-gradient(rgb(180, 180, 180), white);
 }
 
+//#wrapper {
+//  position: relative;
+//}
+//
+//#imdb_index {
+//  position: absolute;
+//}
+
 .add_a_movie {
   text-align: center;
   padding-top: 50px;
@@ -18,5 +26,19 @@ body {
 
 .add_movie_title {
   padding-bottom: 50px;
-  @import url('https://fonts.googleapis.com/css?family=Montserrat');
+}
+
+.last_five_movies_title {
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  padding-bottom: 50px;
+  padding-top: 20px;
+}
+
+.imdb_index {
+  float: right;
+}
+
+.watched_on_at_cinema_index {
+  padding-top: 10px;
 }

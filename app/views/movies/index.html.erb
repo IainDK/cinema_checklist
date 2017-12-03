@@ -1,5 +1,16 @@
+<div class=last_five_movies_title>
+  <h3> Last 5 Movies Watched: </h3>
+</div>
 <% @movies.each do |movie| %>
-
-<%= movie.movie_title %>
-
+  <div class="col-md-6 col-md-offset-3">
+    <div class=well>
+        <strong> <%= link_to movie.movie_title, movie_path(movie) %> (<%= movie.year_of_release %>) </strong>
+        <span class="imdb_index">
+          <%= link_to("IMDb", "http://www.imdb.com/title/#{movie.imdb_link}") %>
+        </span><br>
+        <div class="watched_on_at_cinema_index">
+          <p> Watched on the <%= movie.uk_date_format %> at <%= movie.cinema %>. </p>
+        </div>
+    </div>
+  </div>
 <% end %>

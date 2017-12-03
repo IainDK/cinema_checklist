@@ -1,11 +1,12 @@
 <div class="add_a_movie">
   <div class="col-md-6 col-md-offset-3">
     <div class="add_movie_title">
-      <h3> Add a Movie <h3> 
+      <h3> Add a Movie <h3>
     </div>
     <div class=well>
       <%= form_for @movie do |f| %>
         <%= f.text_field :movie_title, placeholder: "Movie Title", autofocus: true, class: 'form-control' %><br>
+        <%= f.text_field :year_of_release, placeholder: "Year of Release", class: 'form-control' %><br>
         <%= f.text_field :watch_date, placeholder: "Watch Date", class: 'form-control' %><br>
         <%= f.text_field :cinema, placeholder: "Cinema Branch", class: 'form-control' %><br>
         <%= f.text_field :imdb_link, placeholder: "IMDB Link", class: 'form-control' %><br>
