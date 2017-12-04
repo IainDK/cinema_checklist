@@ -4,7 +4,7 @@
 <% @movies.each do |movie| %>
   <div class="col-md-6 col-md-offset-3">
     <div class=well>
-        <strong> <%= link_to movie.movie_title, movie_path(movie) %> (<%= movie.year_of_release %>) </strong>
+        <strong> <%= link_to movie.title, movie_path(movie) %> (<%= movie.year_of_release %>) </strong>
         <span class="imdb_index">
           <%= link_to("IMDb", "http://www.imdb.com/title/#{movie.imdb_link}") %>
         </span><br>
