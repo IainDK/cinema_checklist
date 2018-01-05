@@ -1,0 +1,17 @@
+<div class="add_a_movie">
+  <div class="col-md-6 col-md-offset-3">
+    <div class="add_movie_title">
+      <h3> Log In <h3>
+    </div>
+    <div class=well>
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+        <%= f.text_field :email, placeholder: "  Email Address", autofocus: true, :title => 100, :size => 90 %><br><br>
+        <%= f.password_field :password, placeholder: "  Password",  :title => 100, :size => 90 %><br><br>
+        <% if devise_mapping.rememberable? %>
+        <%= f.check_box :remember_me %> <strong> Remember Me </strong>
+        <% end %><br><br>
+        <%= f.submit "Log in" %>
+      <% end %>
+    </div>
+  </div>
+</div>
