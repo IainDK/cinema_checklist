@@ -1,7 +1,7 @@
 <div class=last_five_movies_title>
   <h3> Last 5 Movies Watched: </h3>
 </div>
-<% @movies.each do |movie| %>
+<% @movies.reverse_each do |movie| %>
   <div class="col-md-6 col-md-offset-3">
     <div class=well>
         <strong> <%= link_to movie.title, movie_path(movie) %> (<%= movie.year_of_release %>) </strong>
