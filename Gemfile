@@ -31,6 +31,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'pg'
 gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
+gem 'devise'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
