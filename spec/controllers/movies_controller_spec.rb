@@ -2,11 +2,12 @@ require 'rails_helper'
 
 RSpec.describe MoviesController, type: :controller do
 
+  let(:movie) { Movie.create(title: "Lost in Translation", year_of_release: 2003, watch_date: "28/10/2003",
+  cinema: "Cineworld", imdb_link: "tt0335266") }
+
   describe '#index' do
 
     it 'renders an array of every movie stored in the db' do
-      movie = Movie.create(title: "Lost in Translation", year_of_release: 2003, watch_date: "28/10/2003",
-      cinema: "Cineworld", imdb_link: "tt0335266")
       get :index
       expect(assigns(:movies)).to eq([movie])
     end
@@ -20,27 +21,13 @@ RSpec.describe MoviesController, type: :controller do
   describe '#show' do
 
     it 'assigns the requested movie to @movie' do
-      movie = Movie.create(title: "Lost in Translation", year_of_release: 2003, watch_date: "28/10/2003",
-      cinema: "Cineworld", imdb_link: "tt0335266")
       get :show, params: { id: movie.id }
       expect(assigns(:movie)).to eq(movie)
     end
 
     it "renders the index template" do
-      movie = Movie.create(title: "Lost in Translation", year_of_release: 2003, watch_date: "28/10/2003",
-      cinema: "Cineworld", imdb_link: "tt0335266")
       get :show, params: { id: movie.id }
       expect(response).to render_template("show")
-    end
-  end
-
-  describe '#new' do
-
-    it 'renders the new template' do
-      movie = Movie.create(title: "Lost in Translation", year_of_release: 2003, watch_date: "28/10/2003",
-      cinema: "Cineworld", imdb_link: "tt0335266")
-      get :new
-      expect(response).to render_template("new")
     end
   end
 

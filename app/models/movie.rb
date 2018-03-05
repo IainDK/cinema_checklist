@@ -39,10 +39,14 @@ class Movie < ApplicationRecord
   end
 
   def release_year_in_present_time?
-    year_of_release.to_i <= Time.now.to_s.split("-").first.to_i
+    year_of_release.to_i <= current_year
   end
 
   def release_year_is_4_characters_long?
     year_of_release.to_s.length == 4
+  end
+
+  def current_year
+    Time.now.to_s.split("-").first.to_i
   end
 end
